@@ -29,7 +29,9 @@ namespace Week_12___Travel_Extravaganza
         private void frmEdit_Load(object sender, EventArgs e)
         {
 
-            string apiPath = @"C:\Users\aaron.FILLMORE\Source\Configs\wk12\";
+            var pathWithEnv = @"%USERPROFILE%\Source\Configs\wk12\";
+            var apiPath = Environment.ExpandEnvironmentVariables(pathWithEnv);
+
             string apiToken = "";
             string apiSecret = "";
 
