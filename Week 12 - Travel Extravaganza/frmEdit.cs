@@ -28,6 +28,18 @@ namespace Week_12___Travel_Extravaganza
         // On Load: Collects API, Sets frmEdit Text Based On Tab, Builds Data Controls From SortedList
         private void frmEdit_Load(object sender, EventArgs e)
         {
+            /**********************************************************************
+             *                                                                    *
+             * The following code loads the api token and secrets from files in   *
+             * the users profile. They should be stored in the following manner:  *
+             *                                                                    *
+             * %USERPROFILE%\Source\Configs\wk12\[files]                          *
+             *                                                                    *
+             * the token should be in a file named: apiToken.txt                  *
+             *                                                                    *
+             * the secret should be in a file named: apiSecret.txt                *
+             *                                                                    *
+             **********************************************************************/
 
             var pathWithEnv = @"%USERPROFILE%\Source\Configs\wk12\";
             var apiPath = Environment.ExpandEnvironmentVariables(pathWithEnv);
